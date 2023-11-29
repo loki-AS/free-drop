@@ -1,27 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --primary-color: #4338ca;
+  --secondary-color: #e0e7ff;
+  --sidebar-border-color: #3730a3;
+  --light-button-color: #c7d2fe;
+  --sidebar-hover-button-color: #4f46e5bf;
+  --sidebar-active-button-color: #3730a3;
+  --footer-color: #9ca3af;
+  --body-color: #f5f5f5;
+  --inactive-text-color: #a5b4fc;
+  --text-color: #111827;
+  --border-color: #2f3139;
+  --table-text-color: #6b7280;
+  --header-border-color: #d1d5db;
+  --label-color: #374151;
+  --error-color: #ef4444;
+  --success-color: #22c55e;
+  --info-text-color: #9ca3af;
+  --popup-button-color: #4f46e5;
+  --popup-button-hover-color: #5946e5;
+  --tabs-border-color: #dedede;
+  --login-text-color: #4b5563;
+  --link-text-color: #4f46e5;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Poppins", sans-serif;
+}
+
+.ephesis {
+  font-family: "Ephesis", cursive;
+}
+
+.button-shadow {
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.table-shadow {
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #5c5c5c;
+}
+
+.header-shadow {
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.12));
 }
